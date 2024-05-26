@@ -13,6 +13,10 @@
         display: none;
     }
 
+    header h1 {
+        font-size: 8vw;
+    }
+
     header nav {
         flex-direction: column;
         align-items: center;
@@ -25,6 +29,10 @@
         padding: 20px 10px 70px 10px;
     }
 
+    .principal h1 {
+        font-size: 12vw;
+    }
+
     #sobre img {
         order: 1;
     }
@@ -32,6 +40,7 @@
     #sobre article {
         order: 2;
     }
+
 }
 
 @media (min-width: 1023px) {
@@ -45,6 +54,10 @@
         background-repeat: no-repeat;
     }
 
+    header h1 {
+        font-size: 3.3em;
+    }
+
     header nav {
         padding: 20px;
         background-color: #F5B7C2;
@@ -53,6 +66,10 @@
 
     .principal {
         padding: 100px 20px;
+    }
+
+    .principal h1 {
+        font-size: 4em;
     }
 }
 
@@ -112,7 +129,6 @@ header .logo {
 
 header h1 {
     font-family: 'Amory', serif;
-    font-size: 3.3em;
     line-height: 1.3em;
     font-weight: 100;
     margin: 0;
@@ -191,7 +207,6 @@ header nav .hamburger-menu {
 .principal h1 {
     margin: 0;
     font-family: 'Amory';
-    font-size: 4em;
     line-height: 1em;
     color: #71ACDC;
 }
@@ -292,6 +307,7 @@ header nav .hamburger-menu {
     gap: 2em;
     justify-content: center;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 #servicos article section {
