@@ -14,7 +14,7 @@
     }
 
     header h1 {
-        font-size: 8vw;
+        font-size: 10vw;
     }
 
     header nav {
@@ -25,20 +25,39 @@
         background-color: #fcf7fb;
     }
 
+    header nav a:hover {
+        color: #F5B7C2;
+        text-shadow: 0px 0px 5px #F5B7C2;
+    }
+
     .principal {
-        padding: 20px 10px 70px 10px;
+        padding: 20px 20px 70px 20px;
     }
 
     .principal h1 {
-        font-size: 12vw;
+        font-size: 11vw;
+    }
+
+    .principal p {
+        font-size: 1.6em;
+        padding: 0 10px;
+    }
+
+    .principal button {
+        font-size: 4vw;
     }
 
     #sobre img {
         order: 1;
+        max-width: 60%;
     }
 
     #sobre article {
         order: 2;
+    }
+
+    #servicos h2 {
+        font-size: 11vw;
     }
 
 }
@@ -69,6 +88,22 @@
     }
 
     .principal h1 {
+        font-size: 4em;
+    }
+
+    .principal p {
+        font-size: 2em;
+    }
+
+    .principal button {
+        font-size: 1.4em;
+    }
+
+    #sobre img {
+        max-width: 300px;
+    }
+
+    #servicos h2 {
         font-size: 4em;
     }
 }
@@ -175,6 +210,19 @@ header nav .hamburger-menu {
     display: block;
 }
 
+nav a {
+    color:#fcf7fb;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 1.1em;
+    transition: 400ms ease;
+}
+
+nav a:hover {
+    color: #fcf7fb;
+    text-shadow: 0px 0px 5px #fcf7fb;
+}
+
 #nav-mobile {
     flex-direction: column;
     font-size: 1.4em;
@@ -212,7 +260,6 @@ header nav .hamburger-menu {
 }
 
 .principal p {
-    font-size: 2em;
     line-height: 1.4em;
     max-width: 800px;
 }
@@ -223,7 +270,6 @@ header nav .hamburger-menu {
     background-color: #71ACDC;
     text-transform: uppercase;
     font-weight: bolder;
-    font-size: 1.4em;
     transition: 0.5s ease;
 }
 
@@ -260,7 +306,7 @@ header nav .hamburger-menu {
 }
 
 #sobre p {
-    margin: 0;
+    margin: 20px 0 0 0;
     font-size: 1.4em;
     line-height: 1.4em;
     color: #fff;
@@ -270,17 +316,23 @@ header nav .hamburger-menu {
     border: 5px solid #fff;
     border-radius: 50%;
     aspect-ratio: 1;
-    max-width: 300px;
 }
 
 #sobre button {
     background-color: #fcf7fb;
-    border-radius: 15px;
+    border-radius: 12px;
     font-size: 1.2em;
     font-weight: bold;
-    border: 1px solid #F5B7C2;
+    border: 2px solid #F5B7C2;
     color: #F5B7C2;
     margin: 20px 0;
+    padding: 10px 50px;
+    transition: 400ms ease;
+}
+
+#sobre button:hover {
+    background-color: #F5B7C2;
+    color: #fcf7fb;
 }
 
 #servicos {
@@ -292,7 +344,6 @@ header nav .hamburger-menu {
 #servicos h2 {
     font-family: 'Amory', serif;
     color: #F5B7C2;
-    font-size: 4em;
     width: 100%;
     text-align: center;
     margin: 0;
