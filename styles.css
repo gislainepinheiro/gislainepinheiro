@@ -255,6 +255,7 @@ header nav .hamburger-menu {
     color: #fcf7fb;
     font-family: 'Amory', serif;
     font-size: 4em;
+    line-height: 1em;
     margin: 0;
 }
 
@@ -295,11 +296,13 @@ header nav .hamburger-menu {
     width: 100%;
     text-align: center;
     margin: 0;
+    line-height: 1em;
 }
 
 #servicos h3 {
     color: #F5B7C2;
     font-size: 2em;
+    line-height: 1em;
 }
 
 #servicos article {
