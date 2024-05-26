@@ -1,0 +1,331 @@
+@font-face {
+    font-family: 'Amory';
+    src: url(fonts/Amory.ttf);
+  }
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url(fonts/arialnarrow.ttf);
+  }
+
+@media (max-width: 1023px) {
+    .desktop {
+        display: none;
+    }
+
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        text-align: center;
+        background-color: #fcf7fb;
+    }
+
+    .principal {
+        padding: 20px 10px 70px 10px;
+    }
+
+    #sobre img {
+        order: 1;
+    }
+
+    #sobre article {
+        order: 2;
+    }
+}
+
+@media (min-width: 1023px) {
+    .mobile {
+        display: none;
+    }
+
+    header .logo {
+        background-image: url(img/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    header nav {
+        padding: 20px;
+        background-color: #F5B7C2;
+        margin-top: 15px;
+    }
+
+    .principal {
+        padding: 100px 20px;
+    }
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    background-color: #fcf7fb;
+    color: #B1B1B1;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #71ACDC;
+}
+
+a {
+    color: #71ACDC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C4DBE8;
+}
+
+
+
+button {
+    background-color: #71ACDC;
+    color: #fcf7fb;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C4DBE8;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fcf7fb;
+    text-align: center;
+}
+
+header .logo {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    max-width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Amory', serif;
+    font-size: 3.3em;
+    line-height: 1.3em;
+    font-weight: 100;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.1em;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b1b1b1;
+    margin: 0;
+}
+
+header nav {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+header nav ul {
+    display: none;
+
+}
+
+header nav li {
+    list-style-image: url(img/borboleta-lista.png);
+}
+
+
+header nav a {
+    color: #fff;
+}
+
+header nav li a {
+    color:#F5B7C2;
+}
+
+header nav .hamburger-menu {
+    max-height: 30px;
+    max-width: 50px;
+    display: block;
+}
+
+#nav-mobile {
+    flex-direction: column;
+    font-size: 1.4em;
+    color:#F5B7C2;
+    gap: 0.5em;
+    text-align: left;
+}
+
+/* Hero principal */
+.principal {
+    background-color: #fffafe;
+    background-image: url(img/fundo-hero.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    gap: 1em;
+    text-align: center;
+    color: #b1b1b1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.principal .logo-mobile {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.principal h1 {
+    margin: 0;
+    font-family: 'Amory';
+    font-size: 4em;
+    line-height: 1em;
+    color: #71ACDC;
+}
+
+.principal p {
+    font-size: 2em;
+    line-height: 1.4em;
+    max-width: 800px;
+}
+
+.principal button {
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #71ACDC;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.4em;
+    transition: 0.5s ease;
+}
+
+.principal button:hover {
+    box-shadow: 0px 0px 30px #C7C7E1;
+    background-color: #238ee6;
+    transition: 0.5s ease;
+}
+
+/* Seção 'Sobre Mim' */
+#sobre {
+    background-color: #C4DBE8;
+    padding: 70px 20px;
+    text-align: left;
+    color: #fcf7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+
+}
+
+#sobre article {
+    max-width: 600px;
+}
+
+#sobre h2 {
+    color: #fcf7fb;
+    font-family: 'Amory', serif;
+    font-size: 4em;
+    margin: 0;
+}
+
+#sobre p {
+    margin: 0;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    color: #fff;
+}
+
+#sobre img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    max-width: 300px;
+}
+
+#sobre button {
+    background-color: #fcf7fb;
+    border-radius: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 1px solid #F5B7C2;
+    color: #F5B7C2;
+    margin: 20px 0;
+}
+
+#servicos {
+    background-color: #fcf7fb;
+    color: #b1b1b1;
+    padding: 70px 20px;
+}
+
+#servicos h2 {
+    font-family: 'Amory', serif;
+    color: #F5B7C2;
+    font-size: 4em;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+#servicos h3 {
+    color: #F5B7C2;
+    font-size: 2em;
+}
+
+#servicos article {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#servicos article section {
+    max-width: 300px;
+    border: 1px solid #F5B7C2;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+#servicos article p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+#servicos article section {
+    padding: 20px 10px;
+}
+
+.divisor {
+    min-height:10px;
+    width:100%;
+    background: rgb(150,118,51);
+    background: linear-gradient(90deg, rgba(150,118,51,1) 0%, rgba(222,200,121,1) 26%, rgba(150,118,51,1) 67%, rgba(222,200,121,1) 100%);
+}
+ 
+/* Rodapé */
+footer {
+    background-color: #71ACDC;
+    color: #fcf7fb;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #fcf7fb;
+    margin: 0 10px;
+}
