@@ -1,3 +1,5 @@
+/* Aqui começamos introduzindo as fontes que estão no manual de marca, mas não são padrões nos sistemas */
+
 @font-face {
     font-family: 'Amory';
     src: url(fonts/Amory.ttf);
@@ -8,15 +10,21 @@
     src: url(fonts/arialnarrow.ttf);
   }
 
+/* Aqui temos os media queries. Temos apenas um ponto de quebra: abaixo de 1024px (telas menores) e de 1024px pra cima */
+
 @media (max-width: 1023px) {
+
+    /* Os elementos com a classe "desktop" não aparecem abaixo de 1024px, pois devem ficar invisíveis nos dispositivos móveis*/
     .desktop {
         display: none;
     }
 
+    /* o header h1 é o título do site ("Gislaine Pinheiro"), que tem um tamanho diferente nas telas menores*/
     header h1 {
-        font-size: 11vw;
+        font-size: 10vw;
     }
 
+    /* Nos dispositivos móveis, o menu superior aparece em "flex-direction:column;" porque são dispostos na vertical (um abaixo do outro). A cor do fundo também é diferente */
     header nav {
         flex-direction: column;
         align-items: center;
@@ -30,30 +38,32 @@
         text-shadow: 0px 0px 5px #F5B7C2;
     }
 
-    .principal {
+    /* Abaixo são apenas algunas ajustes de tamanho para as telas menores */
+    #principal {
         padding: 20px 20px 70px 20px;
     }
 
-    .principal h1 {
+    #principal h1 {
         font-size: 10vw;
     }
 
-    .principal p {
+    #principal p {
         font-size: 1.6em;
         padding: 0 10px;
     }
 
-    .principal button {
+    #principal button {
         font-size: 4vw;
     }
+    
 
     #sobre img {
-        order: 1;
+        order: 1; /* Isso é para a foto aparecer acima do texto na seção "Sobre Mim" */
         max-width: 60%;
     }
 
     #sobre article {
-        order: 2;
+        order: 2; /* Isso é para o texto aparecer depois da foto na seção "Sobre Mim" */
     }
 
     #servicos h2 {
@@ -63,6 +73,8 @@
 }
 
 @media (min-width: 1023px) {
+
+     /* Os elementos com a classe "mobile" não aparecem nas telas maiores, pois só devem aparecer nos dispositivos móveis*/
     .mobile {
         display: none;
     }
@@ -83,19 +95,19 @@
         margin-top: 15px;
     }
 
-    .principal {
+    #principal {
         padding: 100px 20px;
     }
 
-    .principal h1 {
+    #principal h1 {
         font-size: 4em;
     }
 
-    .principal p {
+    #principal p {
         font-size: 2em;
     }
 
-    .principal button {
+    #principal button {
         font-size: 1.4em;
     }
 
@@ -108,7 +120,7 @@
     }
 }
 
-/* Estilos Globais */
+/* Aqui estão os estilos globais, que valem para todos os tamanhos de tela */
 body {
     font-family: 'Arial Narrow', Arial, sans-serif;
     background-color: #fcf7fb;
@@ -127,9 +139,8 @@ a {
 }
 
 a:hover {
-    color: #C4DBE8;
+    color: #238ee6;
 }
-
 
 
 button {
@@ -186,11 +197,12 @@ header nav {
     gap: 2em;
 }
 
+/* Esta lista no cabeçalho diz respeito ao menu nos dispositivos móveis. O display:none se aplica também nas telas menores porque só deve aparecer depois que o usuário toca no botão do menu */
 header nav ul {
     display: none;
-
 }
 
+/* Aqui faz a borboleta rosa aparecer do lado dos itens do menu nos dispositivos móveis */
 header nav li {
     list-style-image: url(img/borboleta-lista.png);
 }
@@ -231,8 +243,8 @@ nav a:hover {
     text-align: left;
 }
 
-/* Hero principal */
-.principal {
+/* Aqui é a seção principal da página inicial, onde diz "Seu bem-estar começa aqui" */
+#principal {
     background-color: #fffafe;
     background-image: url(img/fundo-hero.png);
     background-size: contain;
@@ -247,24 +259,24 @@ nav a:hover {
     align-items: center;
 }
 
-.principal .logo-mobile {
+#principal .logo-mobile {
     width: 80%;
     margin: 0 auto;
 }
 
-.principal h1 {
+#principal h1 {
     margin: 0;
     font-family: 'Amory';
     line-height: 1em;
     color: #71ACDC;
 }
 
-.principal p {
+#principal p {
     line-height: 1.4em;
     max-width: 800px;
 }
 
-.principal button {
+#principal button {
     border-radius: 10px;
     padding: 15px;
     background-color: #71ACDC;
@@ -273,7 +285,7 @@ nav a:hover {
     transition: 0.5s ease;
 }
 
-.principal button:hover {
+#principal button:hover {
     box-shadow: 0px 0px 30px #C7C7E1;
     background-color: #238ee6;
     transition: 0.5s ease;
@@ -335,6 +347,9 @@ nav a:hover {
     color: #fcf7fb;
 }
 
+
+/* Seção "Serviços" */
+
 #servicos {
     background-color: #fcf7fb;
     color: #b1b1b1;
@@ -379,6 +394,8 @@ nav a:hover {
 #servicos article section {
     padding: 20px 10px;
 }
+
+/* O hr é uma linha divisória. Aqui definimos essa linha com uma altura de 10px e cor dourada. É usada logo acima do rodapé */
 
 hr {
     height:10px;
