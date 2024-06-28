@@ -4,16 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicóloga Gislaine Pinheiro | Consultas online</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="author" content="Carlos Eduardo, Matheus XXX, Renan Medeiros Amancio">
+    <meta name="description" content="Psicóloga Gislaine Pinheiro | Consultas online">
+    <meta name="twitter:image" content="img/logo.png">
+    <meta name="og:image" content="img/logo.png">
+    <title>Psicóloga Gislaine Pinheiro :: Consultas online</title>
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="img/ico.png">
     <script src="js/funcoes.js"></script>
 </head>
 
 <body>
     <header>
+        <section class="redes">
+            <a href="https://wa.me/5548996053724" target="a_blank"><img class="icone-redes" src="img/whats.png"></a>
+            <a href="https://instagram.com/gislainepinheiro.psi" target="a_blank"><img class="icone-redes"
+                    src="img/insta.png"></a>
+            <a href="mailto:psicogislainepinheiro@gmail.com" target="a_blank"><img class="icone-redes desktop"
+                    src="img/mail.png"></a>
+        </section>
         <section class="logo">
-            <h1>Gislaine Pinheiro</h1>
+            <h1><a href="/">Gislaine Pinheiro</a></h1>
             <h2>psicóloga | crp 12/19288</h2>
         </section>
         <nav class="desktop">
@@ -22,7 +33,7 @@
             <a href="/servicos">Serviços</a>
             <a href="/contato">Contato</a>
         </nav>
-        <img src="img/hamburger-menu.png" class="hamburger-menu mobile" onclick="expandeMenu()">
+        <img src="img/hamburger-menu.png" class="hamburger-menu mobile">
         <nav class="mobile">
             <ul id="nav-mobile">
                 <li><a href="/sobre">Sobre</a></li>
@@ -34,13 +45,13 @@
 
 
     <main>
-        
+
         <section id="principal">
             <img src="img/logo-mobi.png" class="logo-mobile mobile">
             <h1>Seu bem-estar começa aqui</h1>
             <p>Descubra um <b>espaço seguro e acolhedor</b> onde você pode explorar seus pensamentos e sentimentos,
                 encontrar equilíbrio e construir um <b>futuro mais saudável e feliz</b>.</p>
-            <button>agende uma consulta online</button>
+            <a href="https://wa.me/554896250571" target="a_blank"><button>agende uma consulta online</button></a>
         </section>
 
         <hr class="mobile">
@@ -48,9 +59,15 @@
         <section id="sobre">
             <article>
                 <h2>Sobre mim</h2>
-                <p>Formada em Psicologia pela Unesc, Gislaine Pinheiro faz atendimentos online com adolescentes, adultos e idosos, com foco na melhoria da qualidade de vida que começa com o bem-estar mental.
+                <p>Formada em psicologia pela UNESC - Universidade do Extremo Sul Catarinense, pós-graduada em Terapia
+                    Sistêmica Familiar pela Rhema Educação e em Transtornos Alimentares, Obesidade e Cirurgia Bariátrica
+                    pelo Grupo Educacional Faveni.</p>
+
+                <p>Meu objetivo é proporcionar saúde mental e física por meio de práticas e estratégias simples e
+                    objetivas, fazendo com que o resultado seja duradouro e consistente, utilizando as ferramentas que a
+                    psicologia oferece através de evidências comprovadas.
                 </p>
-                <button>Saiba mais</button>
+                <a href="/sobre"><button>Saiba mais</button></a>
             </article>
             <img src="img/gislaine.jpg" class="foto-gislaine">
         </section>
@@ -60,28 +77,36 @@
             <h2>Serviços online</h2>
             <article>
                 <section>
-                    <h3>xxxxxx</h3>
-                    <p>vfiore hgirehv pirh pirfv frpiv fpnv fpinv fponv 4piofvnçflkvm fçlkvm kcnv kvnfknbv
-                        okgnclçnvçkfnv</p>
+                    <h3>Avaliação</h3>
+                    <p> Avaliação psicológica e emissão de laudos anterior à cirurgia bariátrica, assim como
+                        acompanhamento posterior.</p>
+                    <a href="/servicos" class="saiba-mais">Saiba mais</a>
                 </section>
                 <section>
-                    <h3>xxxxxx</h3>
-                    <p>vfiore hgirehv pirh pirfv frpiv fpnv fpinv fponv 4piofvnçflkvm fçlkvm kcnv kvnfknbv
-                        okgnclçnvçkfnv</p>
+                    <h3>Transtorno alimentar</h3>
+                    <p>Tratamento dos transtornos como anorexia e compulsão alimentar, proporcionando uma relação saudável com a comida e o corpo.</p>
+                    <a href="/servicos" class="saiba-mais">Saiba mais</a>
                 </section>
                 <section>
-                    <h3>xxxxxx</h3>
-                    <p>vfiore hgirehv pirh pirfv frpiv fpnv fpinv fponv 4piofvnçflkvm fçlkvm kcnv kvnfknbv
-                        okgnclçnvçkfnv</p>
+                    <h3>Adolescentes a idosos</h3>
+                    <p>Terapia para adolescentes, adultos e idosos, com atendimento personalizado para as situações típicas de cada fase da vida.</p>
+                    <a href="/servicos" class="saiba-mais">Saiba mais</a>
                 </section>
             </article>
-        </section>
 
+        </section>
+        <hr>
     </main>
 
-    <hr>
+
 
     <footer>
+        <nav class="footer-menu">
+            <a href="/">Início</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/servicos">Serviços</a>
+            <a href="/contato">Contato</a>
+        </nav>
         <p>&copy; Gislaine Pinheiro. Todos os direitos reservados.</p>
     </footer>
 </body>
