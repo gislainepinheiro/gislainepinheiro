@@ -101,6 +101,10 @@
         flex-direction: column;
     }
 
+    .footer {
+        padding-bottom: 50px;
+    }
+
     .footer-menu {
         flex-direction: column;
         gap: 1em;
