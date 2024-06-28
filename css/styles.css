@@ -12,7 +12,7 @@
 
 /* Aqui temos os media queries. Temos apenas um ponto de quebra: abaixo de 1024px (telas menores) e de 1024px pra cima */
 
-@media (max-width: 1023px) {
+@media (max-width: 899px) {
 
     /* Os elementos com a classe "desktop" não aparecem abaixo de 1024px, pois devem ficar invisíveis nos dispositivos móveis*/
     .desktop {
@@ -145,7 +145,7 @@
 
 }
 
-@media (min-width: 1023px) {
+@media (min-width: 900px) {
 
     /* Os elementos com a classe "mobile" não aparecem nas telas maiores, pois só devem aparecer nos dispositivos móveis*/
     .mobile {
