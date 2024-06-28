@@ -42,7 +42,7 @@
         width: 100%;
         position: fixed;
         bottom: 0px;
-        padding: 10px;
+        padding: 10px 0;
         display: flex;
         justify-content: space-around;
     }
@@ -285,6 +285,10 @@
 
     .inativo {
         display: none;
+    }
+    
+    footer {
+        padding: 20px;
     }
 
 }
@@ -714,7 +718,6 @@ footer {
     background-color: #71ACDC;
     color: #fcf7fb;
     text-align: center;
-    padding: 20px;
 }
 
 footer a {
