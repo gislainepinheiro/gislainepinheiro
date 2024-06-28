@@ -3,17 +3,14 @@ window.onload = inicio;
 function inicio() {
     let hamburger = document.getElementsByClassName('hamburger-menu')[0];
     hamburger.onclick = expandeMenu;
-
     let botoes = document.getElementById('botoes').children;
+    
     if (botoes.length > 0) {
         botoes[0].style.color = "#222";
         for (let i = 0; i < botoes.length; i++) {
-            
             botoes[i].onclick = function() {
                 mostrarServico(botoes[i].id.slice(6));
             };
-            console.log(botoes[i].id);
-            console.log(botoes[i].onclick);
         }
     }
 }
@@ -22,7 +19,6 @@ function inicio() {
 
 function mostrarServico(id) {
     let botoes = document.getElementById('botoes').children;
-    console.log(botoes)
     let conteudos = document.getElementsByClassName('conteudo');
     for (let i = 0; i < botoes.length; i++) {
         if (botoes[i].id === `botao-${id}`) {
