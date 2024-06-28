@@ -149,7 +149,7 @@
     }
 
     header .logo {
-        background-image: url(img/logo.png);
+        background-image: url(../img/logo.png);
         background-size: contain;
         background-repeat: no-repeat;
     }
@@ -210,7 +210,7 @@
 
     #contato {
         min-height: 600px;
-        background-image: url(img/logo.png);
+        background-image: url(../img/logo.png);
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: 60%;
@@ -377,7 +377,7 @@ header nav ul {
 
 /* Aqui faz a borboleta rosa aparecer do lado dos itens do menu nos dispositivos móveis */
 header nav li {
-    list-style-image: url(img/borboleta-lista.png);
+    list-style-image: url(../img/borboleta-lista.png);
 }
 
 
@@ -424,7 +424,7 @@ nav a:hover {
 /* Aqui é a seção principal da página inicial, onde diz "Seu bem-estar começa aqui" */
 #principal {
     background-color: #fffafe;
-    background-image: url(img/fundo-hero.png);
+    background-image: url(../img/fundo-hero.png);
     background-position: center;
     background-repeat: no-repeat;
     text-align: center;
@@ -613,7 +613,7 @@ nav a:hover {
 
 #email {
     color: #FF5A54;
-    background-image: url(img/mail.png);
+    background-image: url(../img/mail.png);
     background-color: #FF5A5411;
 }
 
@@ -624,7 +624,7 @@ nav a:hover {
 
 #instagram {
     color: #D83A5D;
-    background-image: url(img/insta.png);
+    background-image: url(../img/insta.png);
     background-color: #D83A5D11;
 }
 
@@ -635,7 +635,7 @@ nav a:hover {
 
 #whatsapp {
     color: #51C85D;
-    background-image: url(img/whats.png);
+    background-image: url(../img/whats.png);
     background-color: #51C85D11;
 }
 
@@ -659,7 +659,7 @@ hr {
 
 #sobre-principal {
     background-color: #fffafe;
-    background-image: url(img/fundo-hero.png);
+    background-image: url(../img/fundo-hero.png);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
