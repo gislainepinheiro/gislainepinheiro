@@ -1,0 +1,761 @@
+/* Aqui começamos introduzindo as fontes que estão no manual de marca, mas não são padrões nos sistemas */
+
+@font-face {
+    font-family: 'Amory';
+    src: url(../fonts/Amory.ttf);
+}
+
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url(../fonts/arialnarrow.ttf);
+}
+
+/* Aqui temos os media queries. Temos apenas um ponto de quebra: abaixo de 1024px (telas menores) e de 1024px pra cima */
+
+@media (max-width: 1023px) {
+
+    /* Os elementos com a classe "desktop" não aparecem abaixo de 1024px, pois devem ficar invisíveis nos dispositivos móveis*/
+    .desktop {
+        display: none;
+    }
+
+    /* o header h1 é o título do site ("Gislaine Pinheiro"), que tem um tamanho diferente nas telas menores*/
+    header h1 {
+        font-size: 10vw;
+    }
+
+    /* Nos dispositivos móveis, o menu superior aparece em "flex-direction:column;" porque são dispostos na vertical (um abaixo do outro). A cor do fundo também é diferente */
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        text-align: center;
+        background-color: #fcf7fb;
+    }
+
+    header nav a:hover {
+        color: #F5B7C2;
+        text-shadow: 0px 0px 5px #F5B7C2;
+    }
+
+    .redes {
+        width: 100%;
+        position: fixed;
+        bottom: 0px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    a .icone-redes {
+        max-width: 25%;
+        padding: 5px 40px;
+        border-radius: 5px;
+    }
+
+    .icone-redes:hover {
+        background-color: #fcf7fbdd;
+    }
+
+    /* Abaixo são apenas algunas ajustes de tamanho para as telas menores */
+    #principal {
+        padding: 20px 20px 70px 20px;
+        background-size: contain;
+    }
+
+    #principal h1 {
+        font-size: 10vw;
+    }
+
+    #principal p {
+        font-size: 1.6em;
+        padding: 0 10px;
+    }
+
+    #principal button {
+        font-size: 4vw;
+    }
+
+    #sobre img {
+        order: 1;
+        /* Isso é para a foto aparecer acima do texto na seção "Sobre Mim" */
+        max-width: 60%;
+    }
+
+    #sobre article {
+        order: 2;
+        /* Isso é para o texto aparecer depois da foto na seção "Sobre Mim" */
+    }
+
+    #servicos h2 {
+        font-size: 11vw;
+    }
+
+    #contato {
+        width: 90%;
+        margin: 30px auto;
+        background: none;
+    }
+
+    .contato-redes {
+        flex-direction: column;
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    /* PÁGINA SOBRE */
+    #sobre-principal img {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    /* PÁGINA SERVIÇOS */
+
+    #servicos-principal h1 {
+        font-size: 2em;
+    }
+
+    #servicos article section {
+        max-width: 95%;
+    }
+
+    #botoes {
+        display: none;
+    }
+
+
+    .conteudo {
+        background-color: #C4DBE8;
+        color: #fff;
+        font-size: 1.4em;
+        line-height: 1.4em;
+        padding: 15px;
+        border-radius: 10px;
+        margin: 30px auto;
+        max-width: 95%;
+    }
+
+}
+
+@media (min-width: 1023px) {
+
+    /* Os elementos com a classe "mobile" não aparecem nas telas maiores, pois só devem aparecer nos dispositivos móveis*/
+    .mobile {
+        display: none;
+    }
+
+    header .logo {
+        background-image: url(img/logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    header h1 {
+        font-size: 3.3em;
+    }
+
+    header nav {
+        padding: 20px;
+        background-color: #F5B7C2;
+        margin-top: 15px;
+    }
+
+    .redes {
+        max-width: 200px;
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        padding: 10px;
+        border-radius: 0 0 0 10px;
+        background-color: #fcf7fbee;
+    }
+
+    a .icone-redes {
+        max-width: 35px;
+    }
+
+    #principal {
+        padding: 100px 20px;
+        background-size: 50%;
+        transition: background-size 1s ease;
+    }
+
+    #principal:hover {
+        background-size: 55%;
+    }
+
+    #principal h1 {
+        font-size: 4em;
+    }
+
+    #principal p {
+        font-size: 2em;
+    }
+
+    #principal button {
+        font-size: 1.4em;
+    }
+
+    #sobre img {
+        max-width: 300px;
+    }
+
+    #servicos h2 {
+        font-size: 4em;
+    }
+
+    #contato {
+        min-height: 600px;
+        background-image: url(img/logo.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 60%;
+        width: 80%;
+        max-width: 1000px;
+        margin: 50px auto;
+    }
+
+    /* PÁGINA SOBRE */
+    #sobre-principal img {
+        width: 350px;
+        margin: 10px 0 10px 30px;
+        float: right;
+    }
+
+    /* PÁGINA SERVIÇOS */
+
+    #servicos-principal h1 {
+        font-size: 2.6em;
+    }
+
+    #servicos article section {
+        max-width: 300px;
+    }
+
+    #botoes {
+        display: flex;
+    }
+
+
+    .botao {
+        flex-grow: 1;
+        padding: 10px 20px;
+        background-color: #999;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 10px 10px 0 0;
+        transition: all 0.3s ease;
+        margin: 0;
+        border: 1px solid #222;
+    }
+
+    #botoes button:hover {
+        background-color: #ccc;
+        color: #222;
+    }
+
+    .conteudo {
+        background-color: #C4DBE8;
+        color: #fff;
+        font-size: 1.4em;
+        line-height: 1.4em;
+        padding: 15px;
+        border-radius: 0 0 10px 10px;
+    }
+
+
+    .botao .ativo {
+        border-bottom: #C4DBE8;
+    }
+
+    .ativo {
+        background-color: #C4DBE8;
+        border-bottom: #C4DBE8;
+        display: block;
+    }
+
+    .inativo {
+        display: none;
+    }
+
+}
+
+/* Aqui estão os estilos globais, que valem para todos os tamanhos de tela */
+body {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    background-color: #fcf7fb;
+    color: #B1B1B1;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #71ACDC;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+a {
+    color: #71ACDC;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #238ee6;
+}
+
+
+button {
+    background-color: #71ACDC;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C4DBE8;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fcf7fb;
+    text-align: center;
+}
+
+header .logo {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    max-width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Amory', serif;
+    line-height: 1.3em;
+    font-weight: 100;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.1em;
+    font-weight: 100;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #b1b1b1;
+    margin: 0;
+}
+
+header nav {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+/* Esta lista no cabeçalho diz respeito ao menu nos dispositivos móveis. O display:none se aplica também nas telas menores porque só deve aparecer depois que o usuário toca no botão do menu */
+header nav ul {
+    display: none;
+}
+
+/* Aqui faz a borboleta rosa aparecer do lado dos itens do menu nos dispositivos móveis */
+header nav li {
+    list-style-image: url(img/borboleta-lista.png);
+}
+
+
+header nav a {
+    color: #fff;
+}
+
+header nav li a {
+    color: #F5B7C2;
+}
+
+header nav .hamburger-menu {
+    max-height: 30px;
+    max-width: 50px;
+    display: block;
+}
+
+nav a {
+    color: #fcf7fb;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 1.1em;
+    transition: 400ms ease;
+}
+
+nav a:hover {
+    color: #fcf7fb;
+    text-shadow: 0px 0px 5px #fcf7fb;
+}
+
+#nav-mobile {
+    flex-direction: column;
+    font-size: 1.4em;
+    color: #F5B7C2;
+    gap: 0.5em;
+    text-align: left;
+}
+
+.redes {
+    padding: 10px;
+    background-color: #fcf7fbbb;
+}
+
+/* Aqui é a seção principal da página inicial, onde diz "Seu bem-estar começa aqui" */
+#principal {
+    background-color: #fffafe;
+    background-image: url(img/fundo-hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    gap: 1em;
+    text-align: center;
+    color: #b1b1b1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#principal .logo-mobile {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#principal h1 {
+    margin: 0;
+    font-family: 'Amory';
+    line-height: 1em;
+    color: #71ACDC;
+}
+
+#principal p {
+    line-height: 1.4em;
+    max-width: 800px;
+}
+
+#principal button {
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: #FFF;
+    background-color: #71ACDC;
+    text-transform: uppercase;
+    font-weight: bolder;
+    transition: 0.5s ease;
+}
+
+#principal button:hover {
+    box-shadow: 0px 0px 30px #C7C7E1;
+    background-color: #238ee6;
+    transition: 0.5s ease;
+}
+
+/* Seção 'Sobre Mim' */
+#sobre {
+    background-color: #C4DBE8;
+    padding: 70px 20px;
+    text-align: left;
+    color: #fcf7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    flex-wrap: wrap;
+
+}
+
+#sobre article {
+    max-width: 600px;
+}
+
+#sobre h2 {
+    color: #fcf7fb;
+    font-family: 'Amory', serif;
+    font-size: 4em;
+    line-height: 1em;
+    margin: 0;
+}
+
+#sobre p {
+    margin: 20px 0 0 0;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    color: #fff;
+}
+
+#sobre img {
+    border: 5px solid #fff;
+    border-radius: 50%;
+    aspect-ratio: 1;
+}
+
+#sobre button,
+#servicos button {
+    background-color: #fcf7fb;
+    border-radius: 12px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: 2px solid #F5B7C2;
+    color: #F5B7C2;
+    padding: 10px 50px;
+    transition: 400ms ease;
+}
+
+#sobre button {
+    margin: 30px 0;
+}
+
+
+#sobre button:hover {
+    background-color: #F5B7C2;
+    color: #fcf7fb;
+}
+
+
+/* Seção "Serviços" */
+
+#servicos {
+    background-color: #fcf7fb;
+    color: #b1b1b1;
+    padding: 70px 20px;
+    max-width: 1100px;
+    margin: 10px auto;
+}
+
+#servicos h2 {
+    font-family: 'Amory', serif;
+    color: #F5B7C2;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    line-height: 1em;
+}
+
+#servicos h3 {
+    color: #F5B7C2;
+    font-size: 2em;
+    line-height: 1em;
+}
+
+#servicos article {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+#servicos article section {
+    flex-grow: 1;
+    border: 1px solid #F5B7C2;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 20px 15px 50px 15px;
+}
+
+#servicos article p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+    margin-bottom: 40px;
+}
+
+.saiba-mais {
+    padding: 10px;
+    background-color: #F5B7C2;
+    color: #FFF;
+    margin: 50px auto;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
+#contato h1 {
+    font-size: 2em;
+}
+
+.contato-redes {
+    display: flex;
+    gap: 1em;
+}
+
+.contato-redes a {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: right;
+    font-size: 2em;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: 500ms ease;
+    border-radius: 10px;
+}
+
+#email {
+    color: #FF5A54;
+    background-image: url(img/mail.png);
+    background-color: #FF5A5411;
+}
+
+#email:hover {
+    color: #FFF;
+    background-color: #FF5A5455;
+}
+
+#instagram {
+    color: #D83A5D;
+    background-image: url(img/insta.png);
+    background-color: #D83A5D11;
+}
+
+#instagram:hover {
+    color: #FFF;
+    background-color: #D83A5D55;
+}
+
+#whatsapp {
+    color: #51C85D;
+    background-image: url(img/whats.png);
+    background-color: #51C85D11;
+}
+
+#whatsapp:hover {
+    color: #FFF;
+    background-color: #51C85D55;
+}
+
+/* O hr é uma linha divisória. Aqui definimos essa linha com uma altura de 10px e cor dourada. É usada logo acima do rodapé */
+
+hr {
+    height: 10px;
+    background: rgb(150, 118, 51);
+    background: linear-gradient(90deg, rgba(150, 118, 51, 1) 0%, rgba(222, 200, 121, 1) 26%, rgba(150, 118, 51, 1) 67%, rgba(222, 200, 121, 1) 100%);
+    border: none;
+    margin: 0;
+}
+
+
+/* PÁGINA SOBRE */
+
+#sobre-principal {
+    background-color: #fffafe;
+    background-image: url(img/fundo-hero.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #b1b1b1;
+    text-align: center;
+    padding: 3%;
+    max-width: 1000px;
+    margin: 20px auto 70px auto;
+    box-shadow: 1px 1px 4px #eaeaea;
+
+}
+
+#sobre-principal h1 {
+    margin: 14px;
+    padding: 11px;
+    font-family: 'Amory';
+    line-height: 1em;
+    color: #71ACDC;
+    font-size: 50px;
+}
+
+
+#sobre-principal img {
+    border-radius: 10px;
+    border: 5px solid pink;
+}
+
+#sobre-principal p {
+    line-height: 1.4em;
+    color: #929292;
+    text-align: left;
+    padding: 10px;
+    font-size: 1.4em;
+
+}
+
+.capitular {
+    float: left;
+    line-height: 0.8;
+    font-size: 2em;
+    margin-right: 0.1em;
+    font-weight: bold;
+    font-family: 'Amory', serif;
+}
+
+/* Rodapé */
+footer {
+    background-color: #71ACDC;
+    color: #fcf7fb;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #fcf7fb;
+    margin: 0 10px;
+}
+
+.footer-menu {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+/* PÁGINA SERVIÇOS */
+
+#servicos-principal,
+#servicos-detalhes {
+    color: #b1b1b1;
+    padding: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+#servicos-principal {
+    box-shadow: 1px 1px 4px #eaeaea;
+    background-color: #fffafe;
+
+}
+
+
+/* Estilo do Título da Seção */
+#servicos-principal h1 {
+    font-family: 'Amory', serif;
+    color: #F5B7C2;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos Parágrafos */
+#servicos-principal p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+}
