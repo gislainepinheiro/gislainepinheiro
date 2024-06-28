@@ -101,8 +101,8 @@
         flex-direction: column;
     }
 
-    .footer {
-        padding-bottom: 50px;
+    footer {
+        padding-bottom: 100px;
     }
 
     .footer-menu {
